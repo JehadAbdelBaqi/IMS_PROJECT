@@ -1,7 +1,7 @@
 Coverage: 34%
 # Project Title
 
-One Paragraph of project description goes here
+This project is for an inventory management system 
 
 ## Getting Started
 
@@ -9,7 +9,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+mySQL and mySQL Workbench (https) - explain
+Eclipse
+Maven
+Java
 What things you need to install the software and how to install them
+
 
 ```
 Give examples
