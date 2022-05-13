@@ -10,9 +10,13 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 [mySQL and mySQL Workbench](https://www.mysql.com/) - Relational database management.
+
 [Eclipse](https://www.eclipse.org/ide/) - Integrated development environment.
+
 [Maven](https://maven.apache.org/) - Software/application project management.
+
 [Java](https://www.java.com/en/) - Object oriented programming language.
+
 [GitBash](https://git-scm.com/downloads) - Git version control command line emulator.
 
 
