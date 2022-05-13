@@ -4,16 +4,16 @@ public class Item {
 	
 	private Long id;
 	private String itemName;
-	private Long itemPrice;
+	private Double itemPrice;
 	
 	
-	public Item(String itemName, Long itemPrice) {
+	public Item(String itemName, Double itemPrice) {
 		this.setItemName(itemName);
 		this.setItemPrice(itemPrice);
 	}
 
 
-	public Item(Long id, String itemName, Long itemPrice) {
+	public Item(Long id, String itemName, Double itemPrice) {
 		this.setId(id);
 		this.setItemName(itemName);
 		this.setItemPrice(itemPrice);
@@ -40,12 +40,12 @@ public class Item {
 	}
 
 
-	public Long getItemPrice() {
+	public Double getItemPrice() {
 		return itemPrice;
 	}
 
 
-	public void setItemPrice(Long itemPrice) {
+	public void setItemPrice(Double itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 	
@@ -92,9 +92,6 @@ public class Item {
 		} else if (!itemPrice.equals(other.itemPrice))
 			return false;
 		return true;
-		
-//		return Objects.equals(id, other.id) && Objects.equals(itemName, other.itemName)
-//				&& Objects.equals(itemPrice, other.itemPrice);
 	}
 	
 	
