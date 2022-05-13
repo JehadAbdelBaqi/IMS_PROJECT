@@ -1,7 +1,7 @@
 Coverage: 34%
 # Project Title
 
-This project is for an inventory management system 
+This project is for an inventory management system which uses a relational database management system (MySQL) to create a relational database which is used to store customer, inventory and transactional information. The application should be able to create, read, update and delete data from and onto the database. The initial functionality of the application is to do this and this alone.
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-mySQL and mySQL Workbench (https) - explain
+mySQL and mySQL Workbench (https://www.mysql.com/) Hello
 Eclipse
 Maven
 Java
