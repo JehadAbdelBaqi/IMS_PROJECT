@@ -28,6 +28,12 @@ public class OrderDAO implements Dao<Order> {
 		return new Order(id, customerId, orderItems);
 	}
 
+	public Order modelFromResultSet2(ResultSet resultSet) throws SQLException {
+		Long id = resultSet.getLong("id");
+		Long customerId = resultSet.getLong("customer_id");
+		return new Order(id, customerId);
+	}
+
 	public Order insertItem(Long orderId, Long itemId) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
@@ -59,19 +65,23 @@ public class OrderDAO implements Dao<Order> {
 	}
 
 	private List<Item> readItems(Long id) {
+		List<Long> orderItems = new ArrayList<>();
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM order_items WHERE id = " + id);) {
-			List<Item> orderItems = new ArrayList<>();
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM order_items WHERE item_id = " + id);) {
 			while (resultSet.next()) {
-				orderItems.add(itemDAO.modelFromResultSet(resultSet));
+				orderItems.add(resultSet.getLong("item_id"));
 			}
-			return orderItems;
 		} catch (SQLException e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());
 		}
-		return new ArrayList<>();
+		List<Item> itemList = new ArrayList<>();
+		for (Long i : orderItems) {
+			itemList.add(itemDAO.read(i));
+		}
+
+		return itemList;
 	}
 
 	public List<String> addToList(List<String> list, Long id) {
@@ -105,7 +115,7 @@ public class OrderDAO implements Dao<Order> {
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY id DESC LIMIT 1");) {
 			resultSet.next();
-			return modelFromResultSet(resultSet);
+			return modelFromResultSet2(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());
@@ -120,7 +130,7 @@ public class OrderDAO implements Dao<Order> {
 			statement.setLong(1, id);
 			try (ResultSet resultSet = statement.executeQuery();) {
 				resultSet.next();
-				return modelFromResultSet(resultSet);
+				return modelFromResultSet2(resultSet);
 			}
 		} catch (Exception e) {
 			LOGGER.debug(e);
@@ -135,14 +145,7 @@ public class OrderDAO implements Dao<Order> {
 				Statement statement = connection.createStatement();) {
 			statement.executeUpdate("INSERT INTO orders(customer_id) values(" + order.getCustomerId() + ")");
 			return readLatest();
-		}
-//		try (Connection connection = DBUtils.getInstance().getConnection();
-//				PreparedStatement statement = connection
-//						.prepareStatement("INSERT INTO orders(customer_id) VALUES(?)");) {
-//			statement.setLong(1, order.getCustomerId());
-//			statement.executeUpdate();
-
-		catch (Exception e) {
+		} catch (Exception e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());
 		}
@@ -176,28 +179,4 @@ public class OrderDAO implements Dao<Order> {
 		}
 		return 0;
 	}
-
-	
-	public Long returnIdOfItem(int id) {
-		try (Connection connection = DBUtils.getInstance().getConnection();
-				PreparedStatement statement = connection
-						.prepareStatement("SELECT item_id FROM order_items WHERE order_id = ?");) {
-			statement.setLong(1, id);
-			statement.execute();
-			try (ResultSet resultSet = statement.executeQuery();) {
-				resultSet.next();
-				return resultSet.getLong("item_id");
-			} catch (SQLException e) {
-				LOGGER.debug(e);
-				LOGGER.error(e.getMessage());
-			}
-			return null;
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		return null;
-	}
-	
-
 }
