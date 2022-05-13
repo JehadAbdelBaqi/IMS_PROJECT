@@ -6,7 +6,7 @@ This project is for an inventory management system which uses a relational datab
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-To run this application on you local machine you would need to clone the repository from main(
+To run this application on you local machine you would need to clone the repository from [main](https://github.com/JehadAbdelBaqi/IMS_PROJECT) by clicking on code or forking the repository. You would then need to open the folder using GitBash and running the command _mvn clean package_
 
 repo folder from github link above and moved into target folder. from thre open git bash into the folder and type mvn clean package. open jar.
 
