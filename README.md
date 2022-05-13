@@ -1,5 +1,5 @@
 ## IMPORTANT LINKS  
-[GitHub repository link](https://github.com/JehadAbdelBaqi/IMS_PROJECT)
+[GitHub repository](https://github.com/JehadAbdelBaqi/IMS_PROJECT). 
 [Jira project management board](https://project-lucius.atlassian.net/jira/software/projects/IMS)
 
 ## Inventory Management System
