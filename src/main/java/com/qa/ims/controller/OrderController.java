@@ -53,7 +53,7 @@ public class OrderController implements CrudController<Order> {
 				Long orderId = utils.getLong();
 				LOGGER.info("Which item would you like to add to this order?");
 				Long itemId = utils.getLong();
-				orderDAO.insertItem(orderId, itemId);
+				newOrder = orderDAO.insertItem(orderId, itemId);
 				LOGGER.info("Would you like to make another change?");
 				String answerOne = utils.getString();
 				if (answerOne.toLowerCase().equals("yes")) {
@@ -66,7 +66,7 @@ public class OrderController implements CrudController<Order> {
 				Long orderId = utils.getLong();
 				LOGGER.info("Which item would you like to remove from this order?");
 				Long itemId = utils.getLong();
-				orderDAO.removeItem(orderId, itemId);
+				newOrder = orderDAO.removeItem(orderId, itemId);
 				LOGGER.info("Would you like to make another change?");
 				String answerOne = utils.getString();
 				if (answerOne.toLowerCase().equals("yes")) {

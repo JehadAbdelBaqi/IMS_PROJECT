@@ -50,9 +50,12 @@ public class Order {
 	}
 
 	@Override
-	public String toString() {
-		return "Order [id=" + id + ", customerId=" + customerId + "]";
-	}
+    public String toString() {
+        double totalPrice = 0;
+        for (Item i : orderItems)
+            totalPrice += i.getItemPrice();
+        return "Orders [customerId=" + customerId + ", orderItems=" + orderItems + "]\nThe total price is: £" + totalPrice;
+    }
 
 	@Override
 	public int hashCode() {
