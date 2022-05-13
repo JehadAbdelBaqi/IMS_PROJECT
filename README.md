@@ -33,7 +33,12 @@ Integratio testing is taking a multitude of different classes and fucntions and 
 
 ## Built With
 
-* [Maven](https://maven.apache.org/) - Dependency Management
+
+* [mySQL and mySQL Workbench](https://www.mysql.com/)  
+* [Eclipse](https://www.eclipse.org/ide/)   
+* [Maven](https://maven.apache.org/)  
+* [Java](https://www.java.com/en/)   
+* [GitBash](https://git-scm.com/downloads) 
 
 ## Versioning
 
