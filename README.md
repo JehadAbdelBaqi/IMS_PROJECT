@@ -4,15 +4,12 @@ This project is for an inventory management system which uses a relational datab
 
 ## Application builder
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To run this application on you local machine you would need to clone the repository from [main](https://github.com/JehadAbdelBaqi/IMS_PROJECT) by clicking on code or forking the repository. You would then need to open the folder using the terminal command _**mvn clean package**_ which should build the file. After the file is succesfully build you would navigate to the target folder on the terminal and find the file **ims-0.0.1-jar-with-dependencies.jar** and execute the file by running **_java -jar ims-0.0.1-jar-with-dependencies.jar_** to run the file on your terminal. PS -you would need to ensure you have all the prerequisite software installed to run ir successfully - please see below. Some server connections to MySQL would need to be changed to ensure it is feeding information to the correct database. 
 
-To run this application on you local machine you would need to clone the repository from [main](https://github.com/JehadAbdelBaqi/IMS_PROJECT) by clicking on code or forking the repository. You would then need to open the folder using GitBash and running the command _mvn clean package_
-
-repo folder from github link above and moved into target folder. from thre open git bash into the folder and type mvn clean package. open jar.
 
 ### Prerequisites
 
-Here are 
+Here is the tech stack used and the places to download them.
 
 [mySQL and mySQL Workbench](https://www.mysql.com/) - Relational database management.  
 [Eclipse](https://www.eclipse.org/ide/) - Integrated development environment.  
@@ -21,55 +18,18 @@ Here are
 [GitBash](https://git-scm.com/downloads) - Git version control command line emulator.  
 
 
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+The automated tests are done by using JUnit which usually checks a function or method by running it and retreiving the results. An example of this is used in the create method for the DAO classes - the tester creates an instance of a class and uses a method within the classs - it then checks the result to see if they match what was passed into the method as an arguement. If the method return the same result as what is tested - the test have passed so the method is working.
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
+A unit test is to check individual units of source code to see if they are fit for use. For example to check individual functions of a class to ensure they are functioning correctly by giving them arguments and seeing if the result matchess the arguement given.
 
 ### Integration Tests 
-Explain what these tests test, why and how to run them
 
-```
-Give an example
-```
+Integratio testing is taking a multitude of different classes and fucntions and checking if they work together. For example a class instance is made in a test which the subclass inherits from. A method which reads the attributes of the class is then activates with the same attibutes as the instance of the class. In theory the return value of the read method should be the same as the attributes upon instantiation. We have now seen if this read function works well by creating an instance and testing it immediately to retrieve the results. 
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -91,6 +51,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[Help with downloading Maven succesfully on MAC](https://www.youtube.com/watch?v=j0OnSAP-KtU)   
+[Create an ERD using MySQL](https://www.youtube.com/watch?v=E73JoLzNadc)  
+[Free ERD and UML creating tools](https://online.visual-paradigm.com)  
+[Information regaridng many to many relational database tables](https://support.microsoft.com/en-us/office/video-create-many-to-many-relationships-e65bcc53-8e1c-444a-b4fb-1c0b8c1f5653)
