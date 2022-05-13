@@ -63,5 +63,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 [Help with downloading Maven succesfully on MAC](https://www.youtube.com/watch?v=j0OnSAP-KtU)   
 [Create an ERD using MySQL](https://www.youtube.com/watch?v=E73JoLzNadc)  
 [Free ERD and UML creating tools](https://online.visual-paradigm.com)  
-[Information regaridng many to many relational database tables](https://support.microsoft.com/en-us/office/video-create-many-to-many-relationships-e65bcc53-8e1c-444a-b4fb-1c0b8c1f5653)
+[Information regaridng many to many relational database tables](https://support.microsoft.com/en-us/office/video-create-many-to-many-relationships-e65bcc53-8e1c-444a-b4fb-1c0b8c1f5653)  
 [LAST MINUTE RESCUE!!!!](https://www.youtube.com/watch?v=IeL7iq7Lb90)
