@@ -1,5 +1,5 @@
 Coverage: 34%
-# Project Title
+## Inventory Management System
 
 This project is for an inventory management system which uses a relational database management system (MySQL) to create a relational database which is used to store customer, inventory and transactional information. The application should be able to create, read, update and delete data from and onto the database. The initial functionality of the application is to do this and this alone.
 
@@ -7,21 +7,20 @@ This project is for an inventory management system which uses a relational datab
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
+repo folder from github link above and moved into target folder. from thre open git bash into the folder and type mvn clean package. open jar.
+
 ### Prerequisites
+
+Here are 
 
 [mySQL and mySQL Workbench](https://www.mysql.com/) - Relational database management.  
 [Eclipse](https://www.eclipse.org/ide/) - Integrated development environment.  
-[Maven](https://maven.apache.org/) - Software/application project management.  
+[Maven](https://maven.apache.org/) - Software/application project dependency management.  
 [Java](https://www.java.com/en/) - Object oriented programming language.  
 [GitBash](https://git-scm.com/downloads) - Git version control command line emulator.  
 
 
-What things you need to install the software and how to install them
-
-
-```
-Give examples
-```
 
 ### Installing
 
