@@ -1,12 +1,12 @@
-Coverage: 34%
 ## Inventory Management System
 
 This project is for an inventory management system which uses a relational database management system (MySQL) to create a relational database which is used to store customer, inventory and transactional information. The application should be able to create, read, update and delete data from and onto the database. The initial functionality of the application is to do this and this alone.
 
-## Getting Started
+## Application builder
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+To run this application on you local machine you would need to clone the repository from main(
 
 repo folder from github link above and moved into target folder. from thre open git bash into the folder and type mvn clean package. open jar.
 
